@@ -46,6 +46,9 @@ export const Entries = () => {
             ).join("")
         }
     </select>
+    <br>
+
+    <button class="button" id="sendLetter">Send Letter</button>
     </div>
         `
 
