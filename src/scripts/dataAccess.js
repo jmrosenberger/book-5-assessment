@@ -23,7 +23,7 @@ export const fetchPenPals = () => {
         .then(response => response.json()) // Parse as JSON
         .then(
             (person) => {
-            // What should happen when we finally have the array?
+            // Store the external state in application state
             applicationState.penPals = person
         })
 }
@@ -34,7 +34,7 @@ export const fetchEntries = () => {
         .then(response => response.json()) // Parse as JSON
         .then(
             (entries) => {
-            // What should happen when we finally have the array?
+            // Store the external state in application state
             applicationState.entries = entries
         })
 }
@@ -45,7 +45,7 @@ export const fetchLetters = () => {
         .then(response => response.json()) // Parse as JSON
         .then(
             (letters) => {
-            // What should happen when we finally have the array?
+            // Store the external state in application state
             applicationState.letters = letters
         })
 }
