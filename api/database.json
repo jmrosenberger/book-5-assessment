@@ -1,5 +1,26 @@
 {
-    "penPals": [],
+    "penPals": [
+        {
+            "id": 1,
+            "name": "Stefan",
+            "email": "Stefan@stefan.com"
+        },
+        {
+            "id": 2,
+            "name": "Ben",
+            "email": "Ben@ben.com"
+        },
+        {
+            "id": 3,
+            "name": "Brandon",
+            "email": "Brandon@brandon.com"
+        },
+        {
+            "id": 4,
+            "name": "Sharif",
+            "email": "Sharif@sharif.com"
+        }
+    ],
     "entries": [],
     "letters": []
 }
