@@ -20,7 +20,8 @@ export const Entries = () => {
                 }
             ).join("")
         }
-    </select>
+    </select><br>
+    <textarea id="letterInput" name="letterInput" cols="176" rows="10" style="max-width:100%"></textarea>
     <br>
     <h4>Topics</h4>
     <input type="radio" name="topic" id="topic" value="selectedTopic"/>
