@@ -1,0 +1,59 @@
+.entryForm
+fieldset
+ label {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: green;
+}
+
+h1 {
+    color: navy;
+}
+
+
+.entry__list {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted blue;
+    justify-content: space-between;
+    margin: auto 2rem;
+    margin-left: .1rem;
+}
+
+.entry__list h4 {
+    text-decoration: underline;
+    
+    /* border: 2px solid green; */
+}
+
+.entry__container {
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+}
+
+.entry__list div {
+    /* border: 2px solid purple; */
+    justify-content: space-between;
+    display: flex;
+    /* padding: 2rem; */
+    align-items: center;
+}
+
+.entry__delete {
+    width: 120px;
+    height: 50px;
+}
+
+.entry__list:nth-child(odd) {
+    background: #ccc;
+}
+
+.entry__list:nth-child(even) {
+    background: #fff;
+}
