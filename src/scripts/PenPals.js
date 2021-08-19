@@ -3,11 +3,6 @@ import { Entries } from "./EntryForm.js";
 
 
 
-const letters = Letters()
-const entries = Entries()
-
-
-
 
 export const PenPals = () => {
     return `
