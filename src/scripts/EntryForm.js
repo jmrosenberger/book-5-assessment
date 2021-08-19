@@ -1,4 +1,4 @@
-import { getEntries } from "./dataAccess.js"
+import { getEntries, sendEntry } from "./dataAccess.js"
 
 const mainContainer = document.querySelector("#container")
 
