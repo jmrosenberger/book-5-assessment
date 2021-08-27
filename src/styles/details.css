@@ -57,3 +57,7 @@ h1 {
 .entry__list:nth-child(even) {
     background: #fff;
 }
+
+.dropdown {
+    display: block;
+}

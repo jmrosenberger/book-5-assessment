@@ -1,5 +1,5 @@
 import { PenPals } from "./PenPals.js";
-import { fetchEntries, fetchPenPals, fetchLetters } from "./dataAccess.js";
+import { fetchPenPals, fetchLetters, fetchTopics } from "./dataAccess.js";
 
 
 const mainContainer = document.querySelector("#container")
@@ -15,7 +15,7 @@ mainContainer.addEventListener(
 
 const render = () => {
     fetchPenPals()
-    .then(fetchEntries)
+    .then(fetchTopics)
     .then(fetchLetters)
     .then(
         () => {
