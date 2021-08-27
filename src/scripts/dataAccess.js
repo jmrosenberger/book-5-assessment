@@ -1,6 +1,6 @@
 const applicationState = {
     penPals: [],
-    entries: [],
+    topics: [],
     letters: []
 }
 
@@ -28,14 +28,13 @@ export const fetchPenPals = () => {
         })
 }
 
-
-export const fetchEntries = () => {
-    return fetch(`${API}/entries`)    // Fetch from the API
+export const fetchTopics = () => {
+    return fetch(`${API}/topics`)    // Fetch from the API
         .then(response => response.json()) // Parse as JSON
         .then(
-            (entries) => {
+            (topic) => {
             // Store the external state in application state
-            applicationState.entries = entries
+            applicationState.topics = topic
         })
 }
 
@@ -60,41 +59,23 @@ export const fetchLetters = () => {
 
 
 
-export const sendPenPal = (userEntry) => {
-    const fetchOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(userEntry)
-    }
+// export const sendPenPal = (userEntry) => {
+//     const fetchOptions = {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(userEntry)
+//     }
 
 
-    return fetch(`${API}/penPals`, fetchOptions)
-        .then(response => response.json())
-        .then(() => {
-            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-        })
-}
+//     return fetch(`${API}/penPals`, fetchOptions)
+//         .then(response => response.json())
+//         .then(() => {
+//             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+//         })
+// }
 
-
-
-export const sendEntry = (userEntry) => {
-    const fetchOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(userEntry)
-    }
-
-
-    return fetch(`${API}/entries`, fetchOptions)
-        .then(response => response.json())
-        .then(() => {
-            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-        })
-}
 
 
 
@@ -128,8 +109,8 @@ export const getPenPals = () => {
     return applicationState.penPals.map(penPal => ({ ...penPal }))
 }
 
-export const getEntries = () => {
-    return applicationState.entries.map(entry => ({ ...entry }))
+export const getTopics = () => {
+    return applicationState.topics.map(topic => ({ ...topic }))
 }
 
 export const getLetters = () => {
