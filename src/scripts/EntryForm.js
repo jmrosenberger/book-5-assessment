@@ -1,46 +1,20 @@
 import { getTopics, getPenPals, sendLetter } from "./dataAccess.js"
 
 
-
-
-// -------------  STILL CAN'T FIGURE OUT HOW TO CAPTURE THE VALUE OF THE RADIO BUTTON VALUE FOR THE TOPIC ID ---------------- //
-
-
-
 const mainContainer = document.querySelector("#container")
-
-
-
-const topicSelected = document.addEventListener("change", event => {
-    const userSelect = event.target
-    if (userSelect.name.startsWith("topicId--")) {
-        let selectedTopicId = ""
-        const [, topicId] = userSelect.value.split("--")
-        parseInt(topicId) = topicId
-        topicId = selectedTopicId
-
-        
-        return selectedTopicId
-    }
-    // mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-})
-
-
 
 
 document.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "sendLetter") {
         const selectedAuthor = document.querySelector("select[id='authorInput']").value
         const selectedRecipient = document.querySelector("select[id='recipientInput']").value
-        // const selectedTopic = document.querySelector("input[value='topicId--']").value
-        // const selectedTopic = document.getElementById("topicId--${topic.id}").value
-        // const [, topicId] = selectedTopic.split("--")
+        const selectedTopic = document.querySelector("input[name='topic__userSelect']:checked").value
         
         const letterObject = {
             authorId: parseInt(selectedAuthor),
             recipientId: parseInt(selectedRecipient),
             date: Date(),
-            topicId: topicSelected
+            topicId: parseInt(selectedTopic)
         }
         sendLetter(letterObject)
         
@@ -79,7 +53,7 @@ export const Entries = () => {
     ${
         topics.map(
             topic => {
-                return `<input type="radio" name="topic__userSelect" value="topicId--${topic.id}"/>
+                return `<input type="radio" name="topic__userSelect" value="${topic.id}"/>
                         <label class="label" for="topicId--${topic.id}">${topic.name}</label>`
             }
         ).join("")
