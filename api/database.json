@@ -1,24 +1,46 @@
 {
-  "penPals": [
+  "authors": [
     {
       "id": 1,
-      "name": "Stefan",
-      "email": "Stefan@stefan.com"
+      "name": "Stefan Borghesani",
+      "email": "stefan@borghesani.com"
     },
     {
       "id": 2,
-      "name": "Ben",
-      "email": "Ben@ben.com"
+      "name": "Ben Gregory",
+      "email": "ben@gregory.com"
     },
     {
       "id": 3,
-      "name": "Brandon",
-      "email": "Brandon@brandon.com"
+      "name": "Brandon Deleon",
+      "email": "brandon@deleon.com"
     },
     {
       "id": 4,
-      "name": "Sharif",
-      "email": "Sharif@sharif.com"
+      "name": "Sharif Rashed",
+      "email": "sharif@rashed.com"
+    }
+  ],
+  "recipients": [
+    {
+      "id": 1,
+      "name": "Stefan Borghesani",
+      "email": "stefan@borghesani.com"
+    },
+    {
+      "id": 2,
+      "name": "Ben Gregory",
+      "email": "ben@gregory.com"
+    },
+    {
+      "id": 3,
+      "name": "Brandon Deleon",
+      "email": "brandon@deleon.com"
+    },
+    {
+      "id": 4,
+      "name": "Sharif Rashed",
+      "email": "sharif@rashed.com"
     }
   ],
   "topics": [
@@ -45,195 +67,20 @@
   ],
   "letters": [
     {
-      "author": "1",
-      "recipient": "2",
-      "date": 1630010110981,
-      "topic": "selectedTopic",
+      "authorId": 1,
+      "recipientId": 2,
+      "topicId": 4,
+      "letterBody": "congrats on passing client side!",
+      "date": "8/30/2021",
       "id": 1
     },
     {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:00:35 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 2
-    },
-    {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:03:04 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 3
-    },
-    {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:03:29 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 4
-    },
-    {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:08:27 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 5
-    },
-    {
-      "authorId": 1,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 22:15:21 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 6
-    },
-    {
-      "authorId": 4,
-      "recipientId": 1,
-      "date": "Thu Aug 26 2021 22:15:56 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 7
-    },
-    {
-      "authorId": 1,
-      "recipientId": 2,
-      "date": "Thu Aug 26 2021 22:16:38 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 8
-    },
-    {
-      "authorId": 4,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 22:23:10 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 9
-    },
-    {
-      "authorId": 1,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 22:25:22 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 10
-    },
-    {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:26:58 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 11
-    },
-    {
-      "authorId": 1,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 22:28:18 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 12
-    },
-    {
-      "authorId": 1,
-      "recipientId": 2,
-      "date": "Thu Aug 26 2021 22:30:32 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 13
-    },
-    {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:30:50 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 14
-    },
-    {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:39:43 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 15
-    },
-    {
-      "authorId": 1,
-      "recipientId": 2,
-      "date": "Thu Aug 26 2021 22:40:04 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 16
-    },
-    {
-      "authorId": 1,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 22:54:23 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 17
-    },
-    {
-      "authorId": 1,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 22:58:54 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 18
-    },
-    {
-      "authorId": 2,
-      "recipientId": 4,
-      "date": "Thu Aug 26 2021 22:59:16 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 19
-    },
-    {
-      "authorId": 2,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 23:03:46 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 20
-    },
-    {
-      "authorId": 2,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 23:05:38 GMT-0500 (Central Daylight Time)",
-      "topicId": null,
-      "id": 21
-    },
-    {
-      "authorId": 2,
-      "recipientId": 3,
-      "date": "Thu Aug 26 2021 23:39:07 GMT-0500 (Central Daylight Time)",
-      "topicId": 1,
-      "id": 22
-    },
-    {
-      "authorId": 1,
-      "recipientId": 3,
-      "date": "Fri Aug 27 2021 09:44:05 GMT-0500 (Central Daylight Time)",
-      "id": 23
-    },
-    {
-      "authorId": 1,
-      "recipientId": 4,
-      "date": "Fri Aug 27 2021 09:45:12 GMT-0500 (Central Daylight Time)",
-      "id": 24
-    },
-    {
       "authorId": 3,
-      "recipientId": 3,
-      "date": "Mon Aug 30 2021 15:28:50 GMT-0500 (Central Daylight Time)",
-      "id": 25
-    },
-    {
-      "authorId": 2,
-      "recipientId": 3,
-      "date": "Mon Aug 30 2021 15:38:26 GMT-0500 (Central Daylight Time)",
-      "id": 26
-    },
-    {
-      "authorId": 1,
       "recipientId": 4,
-      "date": "Mon Aug 30 2021 15:39:31 GMT-0500 (Central Daylight Time)",
-      "id": 27
-    },
-    {
-      "authorId": 1,
-      "recipientId": 3,
-      "date": "Mon Aug 30 2021 15:40:04 GMT-0500 (Central Daylight Time)",
-      "topicId": 4,
-      "id": 28
+      "topicId": 2,
+      "letterBody": "asdfasdf",
+      "date": "8/30/2021",
+      "id": 2
     }
   ]
 }
