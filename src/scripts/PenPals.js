@@ -10,9 +10,7 @@ export const PenPals = () => {
         <section class="entries">
             ${Entries()}
         </section>
-        
         <section class="letters">
-            <h2>Letters</h2>
             ${Letters()}
         </section>
     `

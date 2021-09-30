@@ -1,12 +1,13 @@
 const applicationState = {
-    penPals: [],
-    topics: [],
+    authors: [],
+    recipients: [],
+    topics: [[]],
     letters: []
 }
 
 const mainContainer = document.querySelector("#container")
 
-const API = "http://localhost:3000"
+const API = "http://localhost:3729"
 
 
 
@@ -18,13 +19,23 @@ const API = "http://localhost:3000"
 
 
 
-export const fetchPenPals = () => {
-    return fetch(`${API}/penPals`)    // Fetch from the API
+export const fetchAuthors = () => {
+    return fetch(`${API}/authors`)    // Fetch from the API
         .then(response => response.json()) // Parse as JSON
         .then(
-            (person) => {
+            (author) => {
             // Store the external state in application state
-            applicationState.penPals = person
+            applicationState.authors = author
+        })
+}
+
+export const fetchRecipients = () => {
+    return fetch(`${API}/recipients`)    // Fetch from the API
+        .then(response => response.json()) // Parse as JSON
+        .then(
+            (recipient) => {
+            // Store the external state in application state
+            applicationState.recipients = recipient
         })
 }
 
@@ -40,7 +51,7 @@ export const fetchTopics = () => {
 
 
 export const fetchLetters = () => {
-    return fetch(`${API}/letters`)    // Fetch from the API
+    return fetch(`${API}/letters?_expand=author&_expand=recipient&_expand=topic`)    // Fetch from the API
         .then(response => response.json()) // Parse as JSON
         .then(
             (letters) => {
@@ -105,8 +116,12 @@ export const sendLetter = (userEntry) => {
 
 
 
-export const getPenPals = () => {
-    return applicationState.penPals.map(penPal => ({ ...penPal }))
+export const getAuthors = () => {
+    return applicationState.authors.map(author => ({ ...author }))
+}
+
+export const getRecipients = () => {
+    return applicationState.recipients.map(recipient => ({ ...recipient }))
 }
 
 export const getTopics = () => {
